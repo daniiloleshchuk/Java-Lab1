@@ -34,6 +34,17 @@ public class Drug {
         this.colorOfDrug = colorOfDrug;
         this.quantityInBox = quantityInBox;
     }
+    
+    public void resetValues(int priceOfPack,String nameOfDrug, String howToUse, int volumeOfActiveSubstanceInMg, String activeSubstance, int maxDosesPerDay, String colorOfDrug, int quantityInBox){
+        Drug.priceOfPack = priceOfPack;
+        this.nameOfDrug = nameOfDrug;
+        this.howToUse = howToUse;
+        this.volumeOfActiveSubstanceInMg = volumeOfActiveSubstanceInMg;
+        this.activeSubstance = activeSubstance;
+        this.maxDosesPerDay = maxDosesPerDay;
+        this.colorOfDrug = colorOfDrug;
+        this.quantityInBox = quantityInBox;
+    }
 
     public static int getPriceOfPack() {
         return priceOfPack;
