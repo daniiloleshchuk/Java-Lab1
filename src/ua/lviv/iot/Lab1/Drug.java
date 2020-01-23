@@ -26,16 +26,10 @@ public class Drug {
     }
 
     public Drug(String nameOfDrug, String howToUse, int volumeOfActiveSubstanceInMg, String activeSubstance, int maxDosesPerDay, String colorOfDrug, int quantityInBox) {
-        this.nameOfDrug = nameOfDrug;
-        this.howToUse = howToUse;
-        this.volumeOfActiveSubstanceInMg = volumeOfActiveSubstanceInMg;
-        this.activeSubstance = activeSubstance;
-        this.maxDosesPerDay = maxDosesPerDay;
-        this.colorOfDrug = colorOfDrug;
-        this.quantityInBox = quantityInBox;
+        this.resetValues(0,nameOfDrug,howToUse,volumeOfActiveSubstanceInMg,activeSubstance,maxDosesPerDay,colorOfDrug,quantityInBox);
     }
-    
-    public void resetValues(int priceOfPack,String nameOfDrug, String howToUse, int volumeOfActiveSubstanceInMg, String activeSubstance, int maxDosesPerDay, String colorOfDrug, int quantityInBox){
+
+    public void resetValues(int priceOfPack, String nameOfDrug, String howToUse, int volumeOfActiveSubstanceInMg, String activeSubstance, int maxDosesPerDay, String colorOfDrug, int quantityInBox) {
         Drug.priceOfPack = priceOfPack;
         this.nameOfDrug = nameOfDrug;
         this.howToUse = howToUse;
