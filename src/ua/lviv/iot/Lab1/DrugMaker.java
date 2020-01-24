@@ -1,119 +1,30 @@
 package ua.lviv.iot.Lab1;
 
-public class Drug {
+public class DrugMaker {
+    public static void main(String[] args) {
+        Drug essentiale = new Drug();
+        Drug karvalol = new Drug(50, "α-bromisovalerianic acid ethyl ester, phenobarbital, peppermint oil", 50, "transparent", 1);
+        Drug anaferon = new Drug("Anaferon", "Use after eating", 15, "some active subtance", 8, "white", 20);
 
-    private static int priceOfPack;
+        System.out.println("\n");
+        System.out.println(essentiale.toString());
+        System.out.println("\n");
+        System.out.println(karvalol.toString());
+        System.out.println("\n");
+        System.out.println(anaferon.toString());
+        System.out.println("\n\n\n");
 
-    protected String nameOfDrug;
+        Drug[] arrayOfDrugs = new Drug[4];
+        int counter = 0;
+        do {
+            arrayOfDrugs[counter] = new Drug();
+            counter++;
 
-    protected String howToUse;
+        } while (counter < 4);
 
-    private int volumeOfActiveSubstanceInMg;
-
-    private String activeSubstance;
-
-    private int maxDosesPerDay;
-
-    private String colorOfDrug;
-
-    private int quantityInBox;
-
-    public Drug() {
-    }
-
-    public Drug(int volumeOfActiveSubstanceInMg, String activeSubstance, int maxDosesPerDay, String colorOfDrug, int quantityInBox) {
-        this(null, null, volumeOfActiveSubstanceInMg, activeSubstance, maxDosesPerDay, colorOfDrug, quantityInBox);
-    }
-
-    public Drug(String nameOfDrug, String howToUse, int volumeOfActiveSubstanceInMg, String activeSubstance, int maxDosesPerDay, String colorOfDrug, int quantityInBox) {
-        this.resetValues(0,nameOfDrug,howToUse,volumeOfActiveSubstanceInMg,activeSubstance,maxDosesPerDay,colorOfDrug,quantityInBox);
-    }
-
-    public void resetValues(int priceOfPack, String nameOfDrug, String howToUse, int volumeOfActiveSubstanceInMg, String activeSubstance, int maxDosesPerDay, String colorOfDrug, int quantityInBox) {
-        Drug.priceOfPack = priceOfPack;
-        this.nameOfDrug = nameOfDrug;
-        this.howToUse = howToUse;
-        this.volumeOfActiveSubstanceInMg = volumeOfActiveSubstanceInMg;
-        this.activeSubstance = activeSubstance;
-        this.maxDosesPerDay = maxDosesPerDay;
-        this.colorOfDrug = colorOfDrug;
-        this.quantityInBox = quantityInBox;
-    }
-
-    public static int getPriceOfPack() {
-        return priceOfPack;
-    }
-
-    public static void setPriceOfPack(int priceOfPack) {
-        Drug.priceOfPack = priceOfPack;
-    }
-
-    public String getNameOfDrug() {
-        return nameOfDrug;
-    }
-
-    public void setNameOfDrug(String nameOfDrug) {
-        this.nameOfDrug = nameOfDrug;
-    }
-
-    public String getHowToUse() {
-        return howToUse;
-    }
-
-    public void setHowToUse(String howToUse) {
-        this.howToUse = howToUse;
-    }
-
-    public int getVolumeOfActiveSubstanceInMg() {
-        return volumeOfActiveSubstanceInMg;
-    }
-
-    public void setVolumeOfActiveSubstanceInMg(int volumeOfActiveSubstanceInMg) {
-        this.volumeOfActiveSubstanceInMg = volumeOfActiveSubstanceInMg;
-    }
-
-    public String getActiveSubstance() {
-        return activeSubstance;
-    }
-
-    public void setActiveSubstance(String activeSubstance) {
-        this.activeSubstance = activeSubstance;
-    }
-
-    public int getMaxDosesPerDay() {
-        return maxDosesPerDay;
-    }
-
-    public void setMaxDosesPerDay(int maxDosesPerDay) {
-        this.maxDosesPerDay = maxDosesPerDay;
-    }
-
-    public String getColorOfDrug() {
-        return colorOfDrug;
-    }
-
-    public void setColorOfDrug(String colorOfDrug) {
-        this.colorOfDrug = colorOfDrug;
-    }
-
-    public int getQuantityInBox() {
-        return quantityInBox;
-    }
-
-    public void setQuantityInBox(int quantityInBox) {
-        this.quantityInBox = quantityInBox;
-    }
-
-    @java.lang.Override
-    public java.lang.String toString() {
-        return "Drug{" +
-                "nameOfDrug='" + nameOfDrug + '\'' +
-                ", howToUse='" + howToUse + '\'' +
-                ", volumeOfActiveSubstanceInMg=" + volumeOfActiveSubstanceInMg +
-                ", activeSubstance='" + activeSubstance + '\'' +
-                ", maxDosesPerDay=" + maxDosesPerDay +
-                ", colorOfDrug='" + colorOfDrug + '\'' +
-                ", quantityInBox=" + quantityInBox +
-                '}';
+        for (Drug drug : arrayOfDrugs) {
+            System.out.println(drug.toString());
+            System.out.println("\n");
+        }
     }
 }
